@@ -22,7 +22,7 @@ bool RunProcess(const string& kCmdLine) {
         NULL,
         &si,
         &pi)){
-        cerr << "Error: failed to launch ["<< kCmdLine<< "], code="<< GetLastError()<< "\n";
+        cerr << "Ошибка в запуске ["<< kCmdLine<< "], код="<< GetLastError()<< "\n";
         return false;
     }
     WaitForSingleObject(pi.hProcess, INFINITE);
